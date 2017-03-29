@@ -1,5 +1,5 @@
-# whats-up
-Flash Comments - Realtime Live Commenting using Pusher &amp; Websockets
+# whats-up-realtime-status-update
+An app that let's you see any User's Status in realtime
 
 ## Prerequisite Softwares
 - NodeJS
@@ -63,6 +63,4 @@ node server
 
 For Any clarifications or questions Tweet to me at 
 [https://twitter.com/mappmechanic](https://twitter.com/mappmechanic)
-
-
 
