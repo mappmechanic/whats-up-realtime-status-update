@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Whats Up ! Know what other's are up to in Realtime !</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="./assets/pusher-logo.png" />
+            </div>
+            <div id="logout" class="logout">
+               <a href="/logout">Logout</a>
+            </div>
+        </header>
+        <section class="subheader">
+            <img class="whatsup-logo" src="./assets/whatsup.png" />
+            <h2>Whats Up ! Know what other's are up to in Realtime !</h2>
+        </section>
+        <section>
+           <div id="loader" class="loader">
+           </div>
+           <script id="member-template" type="text/x-template">
+                <div class="user-icon">
+                    <img src="./assets/user.png" />
+                </div>
+                <div class="user-info">
+                    <div class="row">
+                        <div class="name">{{username}}</div>
+                        <div class="status">{{status}}</div>
+                        <div class="time">{{time}}</div>
+                    </div>
+                </div>
+            </script>
+           <div id="me" class="me">
+            <div class="myicon">
+                <img src="./assets/self.png" />
+            </div>
+            <div class="status">
+                <div id="myusername" class="username"></div>
+                <div id="mystatus" class="text" contenteditable></div>
+            </div>
+           </div>
+           <div id="membersList" class="members-list">
+           </div>
+           <div id="signup-form" class="tab-content">
+                <div class="header">
+                    <div><img src="./assets/comments.png"></div>
+                    <div class="text">First Time Sign Up !</div>
+                </div>
+                <form class="pure-form" id="user-form">
+                    <div class="signup-form">
+                        <div class="left-side">
+                            <div class="row">
+                                <input type="text" required placeholder="enter a username or displayname" id="display_name">
+                            </div>
+                            <div class="row">
+                                <textarea placeholder="enter initial status text" required id="initial_status" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                            <button 
+                                type="submit" 
+                                class="button-secondary pure-button">Signup/Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+        <script type="text/javascript" src="./app.js"></script>
+    </body>
+</html>
